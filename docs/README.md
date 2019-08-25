@@ -12,9 +12,21 @@
 
 * A recurrent neuron sends the output back to itself.
 
-<img src="normal_neuron_in_recurrent_neural_network.png.png" alt="Normal neuron in recurrent neural network" />
+<img src="normal_neuron_in_recurrent_neural_network.png" alt="Normal neuron in recurrent neural network" />
 
-* A Recurrent neuron sends the output back to itself, here a neuron will receive inputs from both previous time steps and current time steps. Cells that are a function of inputs from previous time steps are also known as memory cells
+* Here is how it looks when we unrole a recurrent neuron thoughtout time.
+
+<img src="multiple_neural_in_recurrent_neural_network.png" alt="Multiple neurons in recurrent neural network" />
+
+* A neuron will receive inputs from both previous timestamps and current timestamps. Cells that are a function of inputs from previous timestamps are also known as memory cells.
+
+* Here is how the entire layers of recurrent 3 neurons look below, we have input of X, then it goes though the recurrent neurons then we get the output Y and then pass it back in the all the neurons back in that layer.
+
+<img src="one_rnn_layer_with_3_neurons.png" alt="one rnn layer with 3 neurons" />
+
+* Here is how it looks when we unrole the entire layer thoughtout time.
+
+<img src="multiple_rnn_layers_with_3_neuron_in_each_layer.png" alt="Multiple layers in recurrent neural network" />
 
 * Human's don't start their thinking from scratch every second, they understand the previous words and don't throw everything away, the thought have persistence.
 
