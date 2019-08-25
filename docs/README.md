@@ -1,6 +1,16 @@
-# Notes
+# Deep learning
 
-## RNN
+## Neural Networks
+
+### Normal neuron in feed forward network
+
+* A normal neuron takes multiple inputs which can be aggregated and it passes throught some sort of Activation function like sigmoid, tanh etc. and we have the output.
+
+<img src="normal_neuron_in_feed_forward_network.png" alt="Normal neuron in feed forward network" />
+
+### RNN
+
+* A Recurrent neuron sends the output back to itself, here a neuron will receive inputs from both previous time steps and current time steps. Cells that are a function of inputs from previous time steps are also known as memory cells
 
 * Human's don't start their thinking from scratch every second, they understand the previous words and don't throw everything away, the thought have persistence.
 
@@ -10,7 +20,7 @@
 
 * Actually, not that different than normal NN, think as multiple copies of the same network, each can pass a message to a successor.
 
-* RNN are the natural architecture of NN for problems related to sequence and list like, speech recognition, language modeling, translation etc.
+* RNN are the natural architecture of NN for problems related to sequence and list like, Time series data, sentences, language modeling etc.
 
 * The successor of RNN is LSTM
 
@@ -26,7 +36,7 @@ Here we need more context. Consider trying to predict the last word in the text 
 
 As the gap grows, RNNs are unable to learn to connect the info, and LSTM comes into picture and don't have this problem.
 
-## LSTM
+### LSTM
 
 * A special kind of RNN, which is capable of learning long-term dependencies. They are explicity designed to avoid long-term dependency problem.
 * Remembering info for long periods of time is their default behavior.
@@ -40,7 +50,7 @@ The idea behind LSTM is the cell state:
 
 The LSTM has 3 gates to protect and control the cell state:
 
-1. **Decide what info we're going to throw away from the cell state.** This decision is made by a sigmoid layer called the "forget gate layer". It looks at `H(t-1)` and `X(t)` a nd outputs a number between 0 and 1 for each number in the cell state `C(t-1)`.
+1. **Decide what info we're going to throw away from the cell state.** This decision is made by a sigmoid layer called the "forget gate layer". It looks at `H(t-1)` and `X(t)` and outputs a number between 0 and 1 for each number in the cell state `C(t-1)`.
 
 2. **Decide what new info we're going to store in the cell state.** This has 2 parts:
 
@@ -64,6 +74,7 @@ The LSTM has 3 gates to protect and control the cell state:
 ### References
 
 https://colah.github.io/posts/2015-08-Understanding-LSTMs/
+https://towardsdatascience.com/understanding-lstm-and-its-quick-implementation-in-keras-for-sentiment-analysis-af410fd85b47
 http://www.bioinf.jku.at/publications/older/2604.pdf
 http://karpathy.github.io/2015/05/21/rnn-effectiveness/
 
