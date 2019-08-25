@@ -76,7 +76,7 @@ As the gap grows, RNNs are unable to learn to connect the info, and LSTM/GRU com
 
 * A special kind of RNN, which is capable of learning long-term dependencies. They are explicity designed to avoid long-term dependency problem.
 
-* Here is how the network looks
+* Here is how the network looks like
 
 <img src="LSTM3-chain.png" alt="LSTM network" />
 
@@ -91,13 +91,18 @@ The LSTM has 3 gates to protect and control the cell state:
 
 1. **Decide what info we're going to throw away from the cell state.** This decision is made by a sigmoid layer called the "forget gate layer". It looks at `H(t-1)` and `X(t)` and outputs a number between 0 and 1 for each number in the cell state `C(t-1)`.
 
+<img src="lstm_step1.png" alt="step1" />
+
 2. **Decide what new info we're going to store in the cell state.** This has 2 parts:
 
-    2.1. A sigmoid layer called the "input gate layer" decides which values we'll update.
+    2.1. A Sigmoid layer called the "input gate layer" decides which values we'll update.
     
-    2.2. A tanh layer creates a vector of new candidate values `C(t)` that could be added to the state.
+    2.2. A Tanh layer creates a vector of new candidate values `C(t)` that could be added to the state.
     
    Will combine these 2 to create an update to the state.
+
+<img src="lstm_step2.png" alt="step1" />
+
 
 
 ## Appendix
@@ -114,9 +119,14 @@ The LSTM has 3 gates to protect and control the cell state:
 
 ### References
 
-https://colah.github.io/posts/2015-08-Understanding-LSTMs/
-https://towardsdatascience.com/understanding-lstm-and-its-quick-implementation-in-keras-for-sentiment-analysis-af410fd85b47
-http://www.bioinf.jku.at/publications/older/2604.pdf
-http://karpathy.github.io/2015/05/21/rnn-effectiveness/
-https://medium.com/@anishsingh20/the-vanishing-gradient-problem-48ae7f501257
+* https://colah.github.io/posts/2015-08-Understanding-LSTMs/
+
+* https://towardsdatascience.com/understanding-lstm-and-its-quick-implementation-in-keras-for-sentiment-analysis-af410fd85b47
+
+* http://www.bioinf.jku.at/publications/older/2604.pdf
+
+* http://karpathy.github.io/2015/05/21/rnn-effectiveness/
+
+* https://medium.com/@anishsingh20/the-vanishing-gradient-problem-48ae7f501257
+
 
