@@ -8,7 +8,11 @@
 
 <img src="normal_neuron_in_feed_forward_network.png" alt="Normal neuron in feed forward network" />
 
-### RNN
+### Normal neuron in recurrent neural network (RNN)
+
+* A recurrent neuron sends the output back to itself.
+
+<img src="normal_neuron_in_recurrent_neural_network.png.png" alt="Normal neuron in recurrent neural network" />
 
 * A Recurrent neuron sends the output back to itself, here a neuron will receive inputs from both previous time steps and current time steps. Cells that are a function of inputs from previous time steps are also known as memory cells
 
