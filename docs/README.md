@@ -99,9 +99,12 @@ The LSTM has 3 gates to protect and control the cell state:
     
     2.2. A Tanh layer creates a vector of new candidate values `C(t)` that could be added to the state.
     
-   Will combine these 2 to create an update to the state.
+<img src="lstm_step2.png" alt="step 2.2" />
 
-<img src="lstm_step2.png" alt="step1" />
+    2.3. Will combine these 2 to create an update to the cell state.
+
+<img src="lstm_step2_2.png" alt="step 2.3" />
+
 
 
 
